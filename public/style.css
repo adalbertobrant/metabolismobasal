@@ -52,7 +52,19 @@ header img.logo {
   width: 9%;
   height: auto;
 }
-
+.switch-language {
+  float: right;
+  text-align: right;
+}
+.lang-btn {
+  float: right;
+  padding: 8px;
+  font-family: "Ubuntu", sans-serif;
+  color: #322153;
+  max-width: 90vw;
+  margin: 0 auto;
+  font-size: 16px;
+}
 .container {
   max-width: 70vw;
   margin: 1rem auto;

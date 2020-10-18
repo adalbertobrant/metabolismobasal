@@ -14,7 +14,7 @@ Enter these following items:
 3 - Rate of exercise
 4 - Sex (Male/Female)
 
-Formula
+Formular
 
 
 - https://www.scielo.br/pdf/abcd/v29n3/pt_0102-6720-abcd-29-03-00185.pdf

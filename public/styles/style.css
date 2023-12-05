@@ -285,10 +285,6 @@ footer {
   height: auto;
 }
 
-footer ul li a:hover {
-  opacity: 0.5;
-}
-
 .beauty-shadow {
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb;
 }
@@ -300,14 +296,6 @@ footer ul li a:hover {
 
 .text-left {
   text-align: left;
-}
-
-.rodape {
-  display: inline-block;
-}
-
-.material-icons {
-  vertical-align: middle;
 }
 
 /* Responsividade */
@@ -345,4 +333,14 @@ footer ul li a:hover {
     width: 100%;
     margin: 15px 0;
   }
+}
+
+.rodape {
+  display: inline-block;  
+  color: #322153;
+  text-align: left;
+}
+
+footer ul li a:hover {
+  color: #9063eb;
 }

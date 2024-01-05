@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <title>Calculateur du Taux Métabolique Basal</title>
+
+  <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+  <link rel="icon" href="../images/favicon.png" />
+  
+  <script src="../scripts/scripts_fr.js"></script>
+  <script src="../scripts/scripts.cjs"></script>
+  <script src="../scripts/shared.js"></script>
+</head>
+
+<body lang="es" onload="Inicializar()">
+  <div class="lan-bar-top">
+    <div class="custom-dropdown">
+      <div class="dropdown-header">
+        <span>Langue: </span>
+        <img src="../images/flag-fr.png">
+      </div>
+      <ul class="dropdown-list">
+        <li><a href="../../index.html" title="Portugais (Brésilien)"><img class="flag" src="../images/flag-br.png"></a></li>
+        <li><a href="./index_ES.html" title="Espagnol"><img class="flag" src="../images/flag-es.png"></a></li>
+        <li><a href="./index_it.html" title="Italien"><img class="flag" src="../images/flag-it.png"></a></li>
+        <li><a href="./index_en.html" title="Anglais"><img class="flag" src="../images/flag-us.png"></a></li>
+        <li><a href="./index_fr.html" title="Français"><img class="flag" src="../images/flag-fr.png"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header>
+    <img src="../images/calcCal.png" alt="calorias" class="logo" />
+    <h1 class="title beauty-shadow">Calculateur du Taux Métabolique Basal</h1>
+  </header>
+
+  <main class="container">
+    <form class="form" id="formulario" onsubmit="return calcular(event)">
+      <fieldset>
+        <div class="field-group">
+          <label for="genero">SEXE:</label>
+          <select name="genero" id="genero">
+            <option value="Feminino">Femme</option>
+            <option value="Masculino">Homme</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="peso">POIDS <small>(kg):</small></label>
+          <input type="number" name="peso" id="peso" step="0.01" min="0" size="4" autofocus required placeholder="70" />
+        </div>
+
+        <div class="field-group">
+          <label for="altura">TAILLE <small>(cm):</small></label>
+          <input type="number" name="altura" id="altura" step="0.01" min="0" size="5" required placeholder="170" />
+        </div>
+
+        <div class="field-group">
+          <label for="idade">ÂGE <small>(années):</small></label>
+          <input type="number" name="idade" id="idade" step="1.00" min="0" size="4" required placeholder="25" />
+        </div>
+
+        <div class="field-btn">
+          <input type="submit" class="button" value="CALCULER" />
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="resultado-container" id="resultado">
+      <h2 class="result">VOTRE RÉSULTAT EST:</h2>
+      <div class="result-list" id="result-data" style="visibility: hidden">
+        <ul>
+          <li> Métabolisme Basal: <span id="metabolismo_basal" class="result-item"></span> kcal</li>
+          <li> Sédentaire: <span id="sedentario" class="result-item"></span> kcal</li>
+          <li> Exercice doux: <span id="exercicio_leve" class="result-item"></span> kcal</li>
+          <li> Exercice modéré: <span id="exercicio_moderado" class="result-item"></span> kcal</li>
+          <li> Exercice régulier: <span id="ativo" class="result-item"></span> kcal</li>
+          <li> Exercice 2 heures par jour: <span id="super_ativo" class="result-item"></span> kcal</li>
+        </ul>
+
+        <h3 class="x-padd">
+          PRENDRE DU POIDS:
+        </h3>
+
+        <p>
+          Pour prendre du poids vous devez consommer
+          <span id="ganhar_peso" class="result-peso"></span> kcal
+        </p>
+
+        <h3 class="x-padd">
+          PERDRE DU POIDS:
+        </h3>
+
+        <p>
+          Pour perdre du poids, vous devez consommer jusqu'à
+          <span id="perder_peso" class="result-peso"></span> kcal
+        </p>
+
+        <h3 class="x-padd">Données d'IMC:</h3>
+
+        <ul>
+          <li> IMC: <span id="imc"></span></li>
+          <li> Classification: <span id="imc_classification"></span> </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="rodape">
+      <div class="rodape text-left">
+        <h4 class="text-center">RÉFÉRENCES</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/adalbertobrant/metabolismobasal/graphs/contributors"><i
+                class="material-icons">article</i>Contributeurs
+            </a>
+          </li>
+          <li>
+            <a href="https://www.leighpeele.com/mifflin-st-jeor-calculator"><i class="material-icons">article</i>Formules du calcul</a>
+          </li>
+          <li>
+            <a href="https://www.scielo.br/pdf/abcd/v29n3/pt_0102-6720-abcd-29-03-00185.pdf"><i
+                class="material-icons">article</i>Importance de l'équation d'Harris-Benedict
+            </a>
+          </li>
+        </ul>
+      </div>
+  </footer>
+</body>
+</html>
